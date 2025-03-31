@@ -443,7 +443,7 @@ def main():
     logger.info(f"Starting stock data retrieval for tickers: {', '.join(ticker_symbols)}")
 
     # PostgreSQL connection settings
-    db_uri = "postgresql://postgres@localhost:5432/tickets_live_tracker"
+    db_uri = "postgresql://postgres:179fae82@localhost:5432/finance_data"
 
     # Process tickers
     results = process_multiple_tickers(ticker_symbols, db_uri)

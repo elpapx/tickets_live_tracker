@@ -1,0 +1,232 @@
+2025-03-31 16:28:19,089 - __main__ - INFO - Starting stock data retrieval process for ILF
+2025-03-31 16:28:19,090 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:28:19,090 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:28:21,174 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:28:21,174 - __main__ - INFO - Function fetch_stock_data executed in 2.08 seconds
+2025-03-31 16:28:21,180 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:28:21,233 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:28:21,233 - __main__ - INFO - All data for ILF has been successfully processed and saved
+2025-03-31 16:36:37,489 - __main__ - INFO - Starting stock data retrieval process for 3 tickers
+2025-03-31 16:36:37,489 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:36:37,490 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:36:37,490 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:36:37,490 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:36:37,490 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:36:39,846 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:36:39,846 - __main__ - INFO - Function fetch_stock_data executed in 2.36 seconds
+2025-03-31 16:36:39,852 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:36:39,861 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:36:39,862 - __main__ - INFO - All data for BAP has been successfully processed and saved
+2025-03-31 16:36:39,862 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:36:39,862 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:36:39,862 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:36:40,987 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:36:40,988 - __main__ - INFO - Function fetch_stock_data executed in 1.12 seconds
+2025-03-31 16:36:40,991 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:36:40,993 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:36:40,993 - __main__ - INFO - All data for ILF has been successfully processed and saved
+2025-03-31 16:36:40,994 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:36:40,994 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:36:40,994 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:36:42,111 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:36:42,111 - __main__ - INFO - Function fetch_stock_data executed in 1.12 seconds
+2025-03-31 16:36:42,118 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:36:42,159 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:36:42,159 - __main__ - INFO - All data for BRK-B has been successfully processed and saved
+2025-03-31 16:36:42,160 - __main__ - INFO - Batch processing complete. Successfully processed 3/3 tickers
+2025-03-31 16:36:42,160 - __main__ - INFO - Function process_multiple_tickers executed in 4.67 seconds
+2025-03-31 16:45:39,495 - __main__ - INFO - Starting stock data retrieval for tickers: BAP, ILF, BRK-B
+2025-03-31 16:45:39,495 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:45:39,495 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:45:39,496 - __main__ - INFO - Setting up database connection to postgresql://postgres@localhost:5432/tickets_live_tracker
+2025-03-31 16:45:39,874 - __main__ - ERROR - Error setting up database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-03-31 16:45:39,875 - __main__ - ERROR - Failed to connect to database: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-03-31 16:45:39,875 - __main__ - WARNING - Continuing without database integration
+2025-03-31 16:45:39,875 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:45:39,875 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:45:39,876 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:45:41,951 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:45:41,952 - __main__ - INFO - Function fetch_stock_data executed in 2.08 seconds
+2025-03-31 16:45:41,960 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:45:41,973 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:45:41,973 - __main__ - INFO - CSV file created successfully for BAP
+2025-03-31 16:45:41,973 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:45:41,974 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:45:41,974 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:45:42,853 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:45:42,853 - __main__ - INFO - Function fetch_stock_data executed in 0.88 seconds
+2025-03-31 16:45:42,857 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:45:42,859 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:45:42,860 - __main__ - INFO - CSV file created successfully for ILF
+2025-03-31 16:45:42,860 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:45:42,860 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:45:42,860 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:45:43,721 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:45:43,722 - __main__ - INFO - Function fetch_stock_data executed in 0.86 seconds
+2025-03-31 16:45:43,728 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:45:43,731 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:45:43,731 - __main__ - INFO - CSV file created successfully for BRK-B
+2025-03-31 16:45:43,731 - __main__ - INFO - Batch processing complete:
+2025-03-31 16:45:43,731 - __main__ - INFO -   - CSV files created: 3/3
+2025-03-31 16:45:43,732 - __main__ - INFO -   - Database imports: 0/3
+2025-03-31 16:45:43,732 - __main__ - INFO - Function process_multiple_tickers executed in 4.24 seconds
+2025-03-31 16:52:23,700 - __main__ - INFO - Starting stock data retrieval for tickers: BAP, ILF, BRK-B
+2025-03-31 16:52:23,700 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:52:23,700 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:52:23,700 - __main__ - INFO - Setting up database connection to postgresql://postgres:179fae82@localhost:5432/tickets_live_tracker
+2025-03-31 16:52:23,849 - __main__ - ERROR - Error setting up database: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-03-31 16:52:23,849 - __main__ - ERROR - Failed to connect to database: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-03-31 16:52:23,849 - __main__ - WARNING - Continuing without database integration
+2025-03-31 16:52:23,849 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:52:23,849 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:52:23,849 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:52:25,659 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:52:25,659 - __main__ - INFO - Function fetch_stock_data executed in 1.81 seconds
+2025-03-31 16:52:25,668 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:52:25,680 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:52:25,680 - __main__ - INFO - CSV file created successfully for BAP
+2025-03-31 16:52:25,680 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:52:25,680 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:52:25,681 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:52:26,619 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:52:26,619 - __main__ - INFO - Function fetch_stock_data executed in 0.94 seconds
+2025-03-31 16:52:26,623 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:52:26,625 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:52:26,625 - __main__ - INFO - CSV file created successfully for ILF
+2025-03-31 16:52:26,625 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:52:26,626 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:52:26,626 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:52:27,494 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:52:27,494 - __main__ - INFO - Function fetch_stock_data executed in 0.87 seconds
+2025-03-31 16:52:27,501 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:52:27,504 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:52:27,504 - __main__ - INFO - CSV file created successfully for BRK-B
+2025-03-31 16:52:27,504 - __main__ - INFO - Batch processing complete:
+2025-03-31 16:52:27,504 - __main__ - INFO -   - CSV files created: 3/3
+2025-03-31 16:52:27,504 - __main__ - INFO -   - Database imports: 0/3
+2025-03-31 16:52:27,505 - __main__ - INFO - Function process_multiple_tickers executed in 3.80 seconds
+2025-03-31 16:53:22,477 - __main__ - INFO - Starting stock data retrieval for tickers: BAP, ILF, BRK-B
+2025-03-31 16:53:22,477 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:53:22,478 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:53:22,478 - __main__ - INFO - Setting up database connection to postgresql://postgres:179fae82@localhost:5432/finance_data
+2025-03-31 16:53:22,751 - __main__ - INFO - Database connection established successfully
+2025-03-31 16:53:22,751 - __main__ - INFO - Database connection established
+2025-03-31 16:53:22,752 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:53:22,752 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:53:22,752 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:53:24,569 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:53:24,570 - __main__ - INFO - Function fetch_stock_data executed in 1.82 seconds
+2025-03-31 16:53:24,578 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:53:24,589 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:53:24,589 - __main__ - INFO - CSV file created successfully for BAP
+2025-03-31 16:53:24,589 - __main__ - INFO - Importing data for ticker BAP to database
+2025-03-31 16:53:24,590 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:53:24,590 - __main__ - ERROR - Failed to import data for BAP to database
+2025-03-31 16:53:24,590 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:53:24,590 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:53:24,590 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:53:26,159 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:53:26,160 - __main__ - INFO - Function fetch_stock_data executed in 1.57 seconds
+2025-03-31 16:53:26,164 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:53:26,165 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:53:26,166 - __main__ - INFO - CSV file created successfully for ILF
+2025-03-31 16:53:26,166 - __main__ - INFO - Importing data for ticker ILF to database
+2025-03-31 16:53:26,166 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:53:26,166 - __main__ - ERROR - Failed to import data for ILF to database
+2025-03-31 16:53:26,166 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:53:26,166 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:53:26,166 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:53:27,096 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:53:27,096 - __main__ - INFO - Function fetch_stock_data executed in 0.93 seconds
+2025-03-31 16:53:27,103 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:53:27,105 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:53:27,105 - __main__ - INFO - CSV file created successfully for BRK-B
+2025-03-31 16:53:27,105 - __main__ - INFO - Importing data for ticker BRK-B to database
+2025-03-31 16:53:27,106 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:53:27,106 - __main__ - ERROR - Failed to import data for BRK-B to database
+2025-03-31 16:53:27,106 - __main__ - INFO - Batch processing complete:
+2025-03-31 16:53:27,106 - __main__ - INFO -   - CSV files created: 3/3
+2025-03-31 16:53:27,106 - __main__ - INFO -   - Database imports: 0/3
+2025-03-31 16:53:27,106 - __main__ - INFO - Function process_multiple_tickers executed in 4.63 seconds
+2025-03-31 16:53:59,403 - __main__ - INFO - Starting stock data retrieval for tickers: BAP, ILF, BRK-B
+2025-03-31 16:53:59,403 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:53:59,403 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:53:59,403 - __main__ - INFO - Setting up database connection to postgresql://postgres:179fae82@localhost:5432/postgres.public.finance_data
+2025-03-31 16:53:59,546 - __main__ - ERROR - Error setting up database: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-03-31 16:53:59,546 - __main__ - ERROR - Failed to connect to database: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-03-31 16:53:59,547 - __main__ - WARNING - Continuing without database integration
+2025-03-31 16:53:59,547 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:53:59,547 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:53:59,547 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:54:01,572 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:54:01,572 - __main__ - INFO - Function fetch_stock_data executed in 2.02 seconds
+2025-03-31 16:54:01,580 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:01,591 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:54:01,591 - __main__ - INFO - CSV file created successfully for BAP
+2025-03-31 16:54:01,592 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:54:01,592 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:54:01,592 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:54:02,507 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:54:02,507 - __main__ - INFO - Function fetch_stock_data executed in 0.92 seconds
+2025-03-31 16:54:02,512 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:02,514 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:54:02,514 - __main__ - INFO - CSV file created successfully for ILF
+2025-03-31 16:54:02,515 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:54:02,515 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:54:02,515 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:54:03,389 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:54:03,389 - __main__ - INFO - Function fetch_stock_data executed in 0.87 seconds
+2025-03-31 16:54:03,395 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:03,397 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:54:03,397 - __main__ - INFO - CSV file created successfully for BRK-B
+2025-03-31 16:54:03,397 - __main__ - INFO - Batch processing complete:
+2025-03-31 16:54:03,398 - __main__ - INFO -   - CSV files created: 3/3
+2025-03-31 16:54:03,398 - __main__ - INFO -   - Database imports: 0/3
+2025-03-31 16:54:03,398 - __main__ - INFO - Function process_multiple_tickers executed in 4.00 seconds
+2025-03-31 16:54:16,367 - __main__ - INFO - Starting stock data retrieval for tickers: BAP, ILF, BRK-B
+2025-03-31 16:54:16,367 - __main__ - INFO - Starting execution of process_multiple_tickers
+2025-03-31 16:54:16,368 - __main__ - INFO - Starting batch processing for 3 tickers: BAP, ILF, BRK-B
+2025-03-31 16:54:16,368 - __main__ - INFO - Setting up database connection to postgresql://postgres:179fae82@localhost:5432/finance_data
+2025-03-31 16:54:16,690 - __main__ - INFO - Database connection established successfully
+2025-03-31 16:54:16,690 - __main__ - INFO - Database connection established
+2025-03-31 16:54:16,690 - __main__ - INFO - Processing ticker: BAP
+2025-03-31 16:54:16,690 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:54:16,691 - __main__ - INFO - Fetching data for ticker: BAP
+2025-03-31 16:54:18,428 - __main__ - INFO - Successfully retrieved data for ticker: BAP
+2025-03-31 16:54:18,429 - __main__ - INFO - Function fetch_stock_data executed in 1.74 seconds
+2025-03-31 16:54:18,435 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:18,444 - __main__ - INFO - Data successfully saved to data\BAP_stockdata.csv
+2025-03-31 16:54:18,444 - __main__ - INFO - CSV file created successfully for BAP
+2025-03-31 16:54:18,444 - __main__ - INFO - Importing data for ticker BAP to database
+2025-03-31 16:54:18,444 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:54:18,444 - __main__ - ERROR - Failed to import data for BAP to database
+2025-03-31 16:54:18,444 - __main__ - INFO - Processing ticker: ILF
+2025-03-31 16:54:18,445 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:54:18,445 - __main__ - INFO - Fetching data for ticker: ILF
+2025-03-31 16:54:19,361 - __main__ - INFO - Successfully retrieved data for ticker: ILF
+2025-03-31 16:54:19,361 - __main__ - INFO - Function fetch_stock_data executed in 0.92 seconds
+2025-03-31 16:54:19,365 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:19,367 - __main__ - INFO - Data successfully saved to data\ILF_stockdata.csv
+2025-03-31 16:54:19,368 - __main__ - INFO - CSV file created successfully for ILF
+2025-03-31 16:54:19,368 - __main__ - INFO - Importing data for ticker ILF to database
+2025-03-31 16:54:19,368 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:54:19,368 - __main__ - ERROR - Failed to import data for ILF to database
+2025-03-31 16:54:19,368 - __main__ - INFO - Processing ticker: BRK-B
+2025-03-31 16:54:19,368 - __main__ - INFO - Starting execution of fetch_stock_data
+2025-03-31 16:54:19,369 - __main__ - INFO - Fetching data for ticker: BRK-B
+2025-03-31 16:54:20,459 - __main__ - INFO - Successfully retrieved data for ticker: BRK-B
+2025-03-31 16:54:20,459 - __main__ - INFO - Function fetch_stock_data executed in 1.09 seconds
+2025-03-31 16:54:20,464 - __main__ - INFO - Successfully converted data to DataFrame
+2025-03-31 16:54:20,466 - __main__ - INFO - Data successfully saved to data\BRK-B_stockdata.csv
+2025-03-31 16:54:20,466 - __main__ - INFO - CSV file created successfully for BRK-B
+2025-03-31 16:54:20,466 - __main__ - INFO - Importing data for ticker BRK-B to database
+2025-03-31 16:54:20,467 - __main__ - ERROR - finance_data table not found in database
+2025-03-31 16:54:20,467 - __main__ - ERROR - Failed to import data for BRK-B to database
+2025-03-31 16:54:20,467 - __main__ - INFO - Batch processing complete:
+2025-03-31 16:54:20,467 - __main__ - INFO -   - CSV files created: 3/3
+2025-03-31 16:54:20,467 - __main__ - INFO -   - Database imports: 0/3
+2025-03-31 16:54:20,467 - __main__ - INFO - Function process_multiple_tickers executed in 4.10 seconds
