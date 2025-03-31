@@ -4,7 +4,7 @@ import logging
 import os
 import time
 import functools
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Dict, Any, Optional, List
 
 
@@ -87,6 +87,9 @@ def fetch_stock_data(ticker: str) -> Optional[Dict[str, Any]]:
         logger.warning(f"No data retrieved for ticker: {ticker}")
         return None
 
+    # Add timestamp to the data
+    data['timestamp'] = datetime.now().isoformat()
+
     logger.info(f"Successfully retrieved data for ticker: {ticker}")
     return data
 
@@ -116,13 +119,14 @@ def convert_to_dataframe(data: Optional[Dict[str, Any]]) -> pd.DataFrame:
         return pd.DataFrame()
 
 
-def save_to_csv(df: pd.DataFrame, ticker: str) -> bool:
+def save_to_csv(df: pd.DataFrame, ticker: str, mode: str = 'a') -> bool:
     """
     Save DataFrame to CSV file.
 
     Args:
         df: DataFrame to save
         ticker: Ticker symbol for filename generation
+        mode: File write mode ('w' for write, 'a' for append)
 
     Returns:
         Boolean indicating success or failure
@@ -144,8 +148,12 @@ def save_to_csv(df: pd.DataFrame, ticker: str) -> bool:
             os.makedirs(data_dir)
 
         file_path = os.path.join(data_dir, csv_filename)
-        df.to_csv(file_path, index=False)
-        logger.info(f"Data successfully saved to {file_path}")
+
+        # Check if file exists to determine if we need to write headers
+        header = not os.path.exists(file_path) or mode == 'w'
+
+        df.to_csv(file_path, mode=mode, header=header, index=False)
+        logger.info(f"Data successfully saved to {file_path} (mode: {mode})")
         return True
     except Exception as e:
         logger.error(f"Error saving data to CSV for {ticker}: {str(e)}")
@@ -171,11 +179,11 @@ def process_ticker(ticker: str) -> bool:
     # Convert to DataFrame
     df = convert_to_dataframe(data)
 
-    # Save to CSV
+    # Save to CSV (append mode)
     if not df.empty:
-        success = save_to_csv(df, ticker)
+        success = save_to_csv(df, ticker, mode='a')
         if success:
-            logger.info(f"All data for {ticker} has been successfully processed and saved")
+            logger.info(f"Data for {ticker} has been successfully processed and appended")
             return True
         else:
             logger.error(f"Failed to save data for {ticker}")
@@ -212,6 +220,64 @@ def process_multiple_tickers(tickers: List[str]) -> Dict[str, bool]:
     return results
 
 
+def limited_time_fetch(tickers: List[str], interval_minutes: int = 10, total_hours: int = 7) -> None:
+    """
+    Fetch stock data at specified intervals for a limited time duration.
+
+    Args:
+        tickers: List of stock ticker symbols
+        interval_minutes: Time between fetches in minutes
+        total_hours: Total duration to run in hours
+    """
+    logger = logging.getLogger(__name__)
+    interval_seconds = interval_minutes * 60
+    total_seconds = total_hours * 3600
+    start_time = datetime.now()
+    end_time = start_time + timedelta(hours=total_hours)
+
+    logger.info(f"Starting limited time fetch at {start_time}")
+    logger.info(f"Will run until {end_time} (total duration: {total_hours} hours)")
+    logger.info(f"Fetch interval: {interval_minutes} minutes")
+
+    cycle_count = 0
+    max_cycles = total_seconds // interval_seconds
+
+    try:
+        while datetime.now() < end_time:
+            cycle_count += 1
+            remaining_time = end_time - datetime.now()
+
+            logger.info(f"\nStarting fetch cycle {cycle_count}/{max_cycles}")
+            logger.info(f"Remaining time: {remaining_time}")
+
+            # Process all tickers
+            results = process_multiple_tickers(tickers)
+
+            # Print summary to console
+            print("\nProcessing Summary:")
+            print("------------------")
+            for ticker, success in results.items():
+                status = "Success" if success else "Failed"
+                print(f"{ticker}: {status}")
+            print(f"\nCycle {cycle_count} of {max_cycles} completed")
+            print(f"Next fetch at: {datetime.now() + timedelta(seconds=interval_seconds)}")
+            print(f"Will stop at: {end_time}")
+
+            # Wait for next cycle (but check periodically to avoid overshooting end time)
+            if cycle_count < max_cycles:
+                sleep_until = datetime.now() + timedelta(seconds=interval_seconds)
+                while datetime.now() < sleep_until and datetime.now() < end_time:
+                    time.sleep(min(10, (sleep_until - datetime.now()).total_seconds()))
+
+    except KeyboardInterrupt:
+        logger.info("Fetch process interrupted by user. Exiting...")
+    except Exception as e:
+        logger.error(f"Unexpected error in fetch process: {str(e)}")
+    finally:
+        logger.info(f"Completed {cycle_count} fetch cycles in total")
+        logger.info(f"Final data saved for all tickers")
+
+
 def main(tickers: List[str]) -> None:
     """
     Main function to orchestrate the stock data retrieval and saving process for multiple tickers.
@@ -223,17 +289,10 @@ def main(tickers: List[str]) -> None:
     setup_logging()
 
     logger = logging.getLogger(__name__)
-    logger.info(f"Starting stock data retrieval process for {len(tickers)} tickers")
+    logger.info(f"Starting limited-time stock data retrieval process for {len(tickers)} tickers")
 
-    # Process all tickers
-    results = process_multiple_tickers(tickers)
-
-    # Print summary to console
-    print("\nProcessing Summary:")
-    print("------------------")
-    for ticker, success in results.items():
-        status = "Success" if success else "Failed"
-        print(f"{ticker}: {status}")
+    # Start limited time fetch (10 minute intervals for 7 hours)
+    limited_time_fetch(tickers, interval_minutes=10, total_hours=7)
 
 
 if __name__ == "__main__":
@@ -242,4 +301,3 @@ if __name__ == "__main__":
 
     # Run main process
     main(ticker_symbols)
-
