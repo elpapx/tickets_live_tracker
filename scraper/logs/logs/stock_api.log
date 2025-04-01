@@ -1,0 +1,12 @@
+2025-03-31 17:44:00,927 - __main__ - INFO - 
+Starting data collection cycle 1
+2025-03-31 17:44:00,950 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.3:5000
+2025-03-31 17:44:00,950 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-31 17:44:02,761 - __main__ - INFO - Saved data for BAP
+2025-03-31 17:44:03,650 - __main__ - INFO - Saved data for ILF
+2025-03-31 17:44:04,526 - __main__ - INFO - Saved data for BRK-B
+2025-03-31 17:44:21,438 - werkzeug - INFO - 127.0.0.1 - - [31/Mar/2025 17:44:21] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 17:44:21,665 - werkzeug - INFO - 127.0.0.1 - - [31/Mar/2025 17:44:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
