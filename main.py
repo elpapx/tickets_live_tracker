@@ -33,9 +33,9 @@ EMPRESAS = {
             "timestamp": "timestamp"
         }
     },
-    "SCOTIABANK": {
-        "nombre": "SCOTIABANK PERU",
-        "archivo": "SCOTIABANK_stockdata.csv",
+    "BRK-B": {
+        "nombre": "Berkshire Hathaway",
+        "archivo": "BRK-B_stockdata.csv",
         "columnas": {
             "nombre": "shortName",
             "precio": "currentPrice",
@@ -47,14 +47,14 @@ EMPRESAS = {
         }
     },
     # Empresa con estructura diferente
-    "FERREYROS": {
-        "nombre": "FERREYROS S.A.A.",
-        "archivo": "FERREYROS_stockdata.csv",
+    "ILF": {
+        "nombre": "iShares Latin America 40 ETF",
+        "archivo": "ILF_stockdata.csv",
         "columnas": {
-            "nombre": "Nombre_Empresa",
-            "precio": "Precio_Cierre",
-            "volumen": "Volumen_Negociado",
-            "timestamp": "Fecha_Hora"
+            "nombre": "shortName",
+            "precio": "open",
+            "volumen": "volume",
+            "timestamp": "timestamp"
             # No tiene apertura, mínimo ni máximo
         }
     }
